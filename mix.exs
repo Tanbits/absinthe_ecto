@@ -6,7 +6,7 @@ defmodule Absinthe.Ecto.Mixfile do
   def project do
     [app: :absinthe_ecto,
      version: @version,
-     elixir: "~> 1.3",
+     elixir: "~> 1.6",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      elixirc_paths: elixirc_paths(Mix.env),
@@ -42,11 +42,11 @@ defmodule Absinthe.Ecto.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:absinthe, "~> 1.3.0 or ~> 1.4.0"},
+      {:absinthe, ">= 1.7"},
       {:ecto, ">= 0.0.0"},
       {:ex_doc, ">= 0.0.0", only: [:dev]},
-      {:postgrex, ">= 0.13.0", only: [:test]},
-      {:ex_machina, ">= 2.0.0", only: [:test]},
+      {:postgrex, ">= 0.16.2", only: [:test]},
+      {:ex_machina, "~> 2.7", only: [:test]}
     ]
   end
 
